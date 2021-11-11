@@ -2,5 +2,5 @@ Datos de Conexion
 -----------------
 
 Nombre DB: Peluqueria
-User:esc
+User:esc@%
 Pass:12345
