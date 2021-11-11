@@ -241,8 +241,9 @@ public class Pantalla extends javax.swing.JFrame{
     
     //Guarda los datos cargado en la base de datos
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        try {// Controlamos cualquier problema con la DB
-                
+        //Capturaremos las excepciones de PK duplicada para dar tratamiendo
+        try {
+            //Verificaremos previo a la carga que el campo Nro de cliente no este vacio y contenga letras    
             if (control.esNumero(txtNroCliente.getText())){
                 control.nuevoPerro( txtNroCliente.getText(),
                                     txtNombreMascota.getText(),
@@ -254,11 +255,11 @@ public class Pantalla extends javax.swing.JFrame{
                                     txtCelularDuenio.getText(),
                                     txtObservaciones.getText()
                                     );
-
+                //Finalizada la carga se informa al usuario el exito de la operacion.
                 JOptionPane.showMessageDialog(null, "Perfecto!! Se acaba de cargar a " + txtNombreMascota.getText() + " como cliente.", "Carga Correcta", JOptionPane.INFORMATION_MESSAGE);
                 limpiaFormulario();
             } else {
-                
+                //Se informa al usuario que reingrese Nro de cliente
                 JOptionPane.showMessageDialog(null, "Hubo un error con el Nro de cliente.\nVerifica que la casilla contenga un numero", "Error en Numero de Cliente", JOptionPane.ERROR_MESSAGE);
             }
             
