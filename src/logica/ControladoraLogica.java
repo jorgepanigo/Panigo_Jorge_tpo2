@@ -15,8 +15,10 @@ public class ControladoraLogica {
     //Se delega a la capa de persistencia la carga de lo datos que se reciben desde la
     public void nuevoPerro(String numCliente, String nombrePerro, String raza, String color, String alergico, String atenciónEspecial, String nombreDuenio, String celularDuenio, String observaciones){
         
+        
             Persis.nuevoCliente(new Perro(numCliente, nombrePerro, raza, color, alergico, atenciónEspecial, nombreDuenio, celularDuenio, observaciones));
-   
+        
+            
     }
     
     //Metodo esNumero validad si un String contiene solo numeros
@@ -28,5 +30,11 @@ public class ControladoraLogica {
             return false;
         }
     }      
+    
+    //Metodo esNumero validad si un String contiene solo numeros
+    public boolean estaVacio(String dato){
+        
+        return dato.equals("");
+    }     
     
 }

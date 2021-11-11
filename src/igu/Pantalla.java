@@ -242,7 +242,7 @@ public class Pantalla extends javax.swing.JFrame{
     //Guarda los datos cargado en la base de datos
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         try {// Controlamos cualquier problema con la DB
-            
+                
             if (control.esNumero(txtNroCliente.getText())){
                 control.nuevoPerro( txtNroCliente.getText(),
                                     txtNombreMascota.getText(),
@@ -259,7 +259,7 @@ public class Pantalla extends javax.swing.JFrame{
                 limpiaFormulario();
             } else {
                 
-                JOptionPane.showMessageDialog(null, "El Numero de cliente debe contener solo numeros.\n Ingresa un valor que no contenga letras", "Numero de cliente no valido", JOptionPane.ERROR_MESSAGE);
+                JOptionPane.showMessageDialog(null, "Hubo un error con el Nro de cliente.\nVerifica que la casilla contenga un numero", "Error en Numero de Cliente", JOptionPane.ERROR_MESSAGE);
             }
             
         } 
