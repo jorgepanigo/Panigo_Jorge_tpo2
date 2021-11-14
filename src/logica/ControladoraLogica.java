@@ -2,8 +2,6 @@
 package logica;
 
 
-import javax.persistence.RollbackException;
-import javax.swing.JOptionPane;
 
 import persistencia.ControladoraPersistencia;
 
@@ -21,7 +19,7 @@ public class ControladoraLogica {
             
     }
     
-    //Metodo esNumero validad si un String contiene solo numeros
+    //Metodo esNumero valida si un String contiene solo numeros
     public boolean esNumero(String dato){
         try {
             Integer.parseInt(dato);
@@ -29,12 +27,6 @@ public class ControladoraLogica {
         } catch (Exception e) {
             return false;
         }
-    }      
-    
-    //Metodo esNumero validad si un String contiene solo numeros
-    public boolean estaVacio(String dato){
-        
-        return dato.equals("");
-    }     
+    }       
     
 }
